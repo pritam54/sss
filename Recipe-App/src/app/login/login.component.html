@@ -7,16 +7,15 @@
             <div class="col-xs-2"></div>
             <div class="col-xs-10">
               <div>
-                <input type="text" placeholder="Enter Employee ID" [(ngModel)]=emailId name="emailIdS"
+                <input type="text" placeholder="Enter UserEmail ID" [(ngModel)]=emailId name="emailIdS"
                   #emailIdS=ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" focused=false class="form-control" id="emailIdS" required>
                   <span *ngIf="emailIdS.touched && emailIdS.invalid" class="alert-warning">
                     Invalid User ID.
                   </span>
               </div>
               <div>
-                <input type="password" placeholder="Enter Password" [(ngModel)]=password
-                  name="passwordS" #userPassword=ngModel focused=false class="form-control"
-                  id="passwordS" minlength="5" maxlength="50" required>
+                <input type="password" placeholder="Enter Password" [(ngModel)]=password name="passwordS" 
+                #userPassword=ngModel focused=false class="form-control" id="passwordS" minlength="5" maxlength="50" required>
                   <span *ngIf="passwordS.touched && passwordS.invalid && (passwordS.errors.required || passwordS.errors.pattern)" class="alert-warning">
                     Invalid password. Must be atleast 6 characters long.
                   </span>
